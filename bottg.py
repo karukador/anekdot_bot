@@ -33,7 +33,12 @@ def send_random_anekdot(message):
     bot.send_message(message.chat.id, text="ещё один анекдот? /anekdot")
 bot.message_handler(commands=['anekdot'])(send_random_anekdot)
 
-
+@bot.message_handler(func=lambda m: True)
+def unknown_command(message):
+ known_commands = ['/start', '/help', '/person', '/news']
+ if message.text.split()[0] not in known_commands:
+     bot.reply_to(message, "Некорректный ввод. Введите /help для просмотра доступных функций")
+     
 bot.polling()
 
 #@anekdotik_Robot
