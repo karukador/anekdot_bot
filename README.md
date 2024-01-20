@@ -1,1 +1,1 @@
-# tg
+# anekdot_bot
