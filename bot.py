@@ -1,4 +1,4 @@
-from BOT_TOKEN import BOT_TOKEN #отдельный файл, из которого импортируется токен бота
+from config import BOT_TOKEN 
 from telebot import TeleBot
 import random
 from anekdot import anekdots
