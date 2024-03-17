@@ -25,7 +25,7 @@ def bot_start(message):
 
 @bot.message_handler(commands=['help'])
 def send_help(message):
-    bot.send_message(message.chat.id, text=help_message + "в боте уже 60 анекдотов!")
+    bot.send_message(message.chat.id, text=help_message + "в боте уже 63 анекдотов!")
 
 def send_random_anekdot(message):
     anekdot = random.choice(anekdots)
